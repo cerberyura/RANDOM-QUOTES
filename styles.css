@@ -20,6 +20,10 @@ body {
    border-radius: 10px;
 }
 
+#toggle-favorite-btn {
+   display: none;
+}
+
 .btn:hover {
    background-color: #0056b3;
 }
@@ -30,4 +34,23 @@ body {
 .quote::before,
 .quote::after {
    content: '"';
+}
+
+.favorites-container {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+
+.favorite-card {
+   background-color: #f9f9f9;
+   color: black;
+   padding: 10px 20px;
+   margin: 10px;
+   border-radius: 8px;
+   width: 25%;
+}
+
+.author {
+   font-style: italic;
 }
