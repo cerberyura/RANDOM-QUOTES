@@ -54,3 +54,10 @@ body {
 .author {
    font-style: italic;
 }
+
+.star-icon {
+   font-size: 30px;
+   vertical-align: middle;
+   color: yellow;
+   cursor: pointer;
+}
