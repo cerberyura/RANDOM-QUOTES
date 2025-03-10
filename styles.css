@@ -20,10 +20,6 @@ body {
    border-radius: 10px;
 }
 
-#toggle-favorite-btn {
-   display: none;
-}
-
 .btn:hover {
    background-color: #0056b3;
 }
