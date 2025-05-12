@@ -15,7 +15,7 @@ function localStorageSetItem(key, value) {
 function localStorageGetItem(key) {
    const value = localStorage.getItem(key);
    try {
-      return JSON.parse8(value);
+      return JSON.parse(value);
    }
    catch {
       return value;

@@ -1,8 +1,11 @@
 import { generateRandomInt } from '../utils/math.js'
 import { handleFavorite } from './favorites.js'
 
-const handleQuote = (quotes, setCurrentQuote) => {
+const handleQuote = (quotes, favoriteQuotes, setCurrentQuote) => {
    const randomQuote = choseRandomQuote(quotes)
+   if(favoriteQuotes.find((quote) => quote.id === randomQuote.id)){
+      randomQuote.isFavorite = true
+   }
    setCurrentQuote(randomQuote)
    displayQuote(randomQuote)
 }
@@ -24,9 +27,13 @@ function choseRandomQuote(quotes) {
    return quotes[randomIndex];
 }
 
+function findQuoteById(quotes, id) {
+   return quotes.find((quote) => quote.id === id);
+}
+
 
 
 
 export {
-   handleQuote,
+   handleQuote, displayQuote, findQuoteById
 }
